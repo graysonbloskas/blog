@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Blog, Comment, User} = require('../models');
 
+
+// home, get all blog posts. No requirement to be logged in.
 router.get('/', async (req, data) => {
     try {
         const blogPost = await Blog.findAll();
@@ -10,5 +12,8 @@ router.get('/', async (req, data) => {
         data.status(500).json(error);
     };
 });
+
+// login route, redirect to main page
+
 
 module.exports = router;
