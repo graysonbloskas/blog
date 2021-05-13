@@ -10,3 +10,5 @@ router.get('/', async (req, data) => {
         data.status(500).json(error);
     };
 });
+
+module.exports = router;
