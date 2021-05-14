@@ -13,7 +13,7 @@ router.get('/', async (req, data) => {
     };
 });
 
-// login route, redirect to main page
+// redirect to main page
 
 
 module.exports = router;

@@ -3,3 +3,8 @@
     height: 10rem;
     color: white;
 }
+
+.login-form {
+    max-width: 25vw;
+    margin-left: 2rem;
+}
