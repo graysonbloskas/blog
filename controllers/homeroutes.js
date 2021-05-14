@@ -12,8 +12,21 @@ router.get('/', async (req, data) => {
         data.status(500).json(error);
     };
 });
+// router.get('/', async (req, data) => {
+//     data.render('home', {layout: 'main.handlebars'})
+// });
 
-// redirect to main page
+// redirect to home page on login
+router.get('/login', (req, data) => {
+    if (req.session.loggedIn) {
+        data.redirect('/');
+        return;
+    }
+    data.render('login');
+})
 
+// router.get('/post/:id', async (req, data) => {
+
+// })
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-
+const path = require('path');
 const routes = require('./controllers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -28,8 +28,8 @@ app.use(session(sesh));
 
 const handlebars = exphbs.create (
     {
-        helpers, 
-        partialsDir: path.join(__dirname, "views/partials")
+        helpers
+        // partialsDir: path.join(__dirname, "views/partials")
     }
 );
 
